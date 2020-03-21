@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.show {
+  display: block;
+}
+
+a.card-link.delete-button {
+  position: absolute;
+  right: 30px;
+  top: 23px;
+  color: red!important;
+  font-weight: bold;
+}
+
+.details {
+  background: gray;
+  color:#fff;
+  padding:10px 14px;
+  border-radious:3px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+form {box-shadow: 2px 9px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 50px 40px;
+  border-radius: 5px;
+  margin-bottom: 53px;
+}
+
+h1.text-center.pb-3 {
+  font-size: 50px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+h1.text-center.pb-3:after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 4px;
+  background: red;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+input.btn.btn-primary {
+  padding: 15px 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  background: tomato;
+  border: 1px solid tomato;
+}
