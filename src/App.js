@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css'
+
 import './index.css';
 import NewForm from './components/NewForm.js'
 import Show from './components/Show.js'
@@ -8,7 +8,7 @@ let baseURL = ''
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } else {
-  baseURL = 'your heroku bakend url here'
+  baseURL = 'your heroku backend url here'
 }
 console.log('current base URL:', baseURL)
 
