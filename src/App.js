@@ -8,7 +8,7 @@ let baseURL = ''
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
 } else {
-  baseURL = 'https://project-finder-team-backend.herokuapp.com/'
+  baseURL = 'https://project-finder-team-front.herokuapp.com/'
 }
 console.log('current base URL:', baseURL)
 
@@ -34,7 +34,7 @@ class App extends Component {
   async getBlogs (){
     try {
       // the async request code you want to try
-      let response = await fetch(`${baseURL}/blogs`)
+      let response = await fetch(`${baseURL}`)
       let data = await response.json()
       this.setState({blogs: data})
     }catch(e){
@@ -69,7 +69,7 @@ class App extends Component {
   async toggleHasTP (blog){
    console.log(blog)
    try{
-   let response = await fetch(baseURL + '/blogs/' + blog._id, {
+   let response = await fetch(baseURL + '' + blog._id, {
      method: 'PUT',
      body: JSON.stringify({inProgress: !blog.inProgress}),
      headers: {
