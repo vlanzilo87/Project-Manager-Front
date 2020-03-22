@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 import './index.css';
 import NewForm from './components/NewForm.js'
 import Show from './components/Show.js'
-let baseURL = ''
+
+let baseURL = process.env.REACT_APP_BASEURL
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
