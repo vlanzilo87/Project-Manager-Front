@@ -21,7 +21,7 @@ async handleSubmit (event) {
     try{
       let response = await
       //this.props.baseURL = http://localhost:3003
-      fetch(this.props.baseURL + 'blogs', {
+      fetch(this.props.baseURL + '/blogs', {
           method: 'POST', // Put, Delete
           body: JSON.stringify({title: this.state.title}, {description: this.state.description}),
           headers: {
