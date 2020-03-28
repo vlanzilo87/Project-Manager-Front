@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import 'bootstrap/dist/css/bootstrap.css'
 import './index.css';
 import NewForm from './components/NewForm.js'
 import Show from './components/Show.js'
@@ -35,7 +35,7 @@ class App extends Component {
   async getBlogs (){
     try {
       // the async request code you want to try
-      let response = await fetch(`${baseURL}`)
+      let response = await fetch(`${baseURL}/blogs`)
       let data = await response.json()
       this.setState({blogs: data})
     }catch(e){
@@ -70,7 +70,7 @@ class App extends Component {
   async toggleHasTP (blog){
    console.log(blog)
    try{
-   let response = await fetch(baseURL + '' + blog._id, {
+   let response = await fetch(baseURL + '/blogs/' + blog._id, {
      method: 'PUT',
      body: JSON.stringify({inProgress: !blog.inProgress}),
      headers: {
