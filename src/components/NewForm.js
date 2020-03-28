@@ -33,7 +33,7 @@ async handleSubmit (event) {
           this.setState({
               title: '',
               inProgress: true,
-              description: '',
+              description: ''
           })
         }catch(e){
           console.error({'Error': e})
