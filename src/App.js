@@ -4,7 +4,7 @@ import './index.css';
 import NewForm from './components/NewForm.js'
 import Show from './components/Show.js'
 
-let baseURL = process.env.REACT_APP_BASEURL
+let baseURL =
 
 if (process.env.NODE_ENV === 'development') {
   baseURL = 'http://localhost:3003'
