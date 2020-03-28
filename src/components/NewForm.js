@@ -27,7 +27,7 @@ async handleSubmit (event) {
               'Content-Type': 'application/json'
             }
           })
-          let data =  await response.json()
+          let data = await response.json()
           this.props.handleAddBlog(data)
           this.setState({
               title: '',
