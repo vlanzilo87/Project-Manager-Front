@@ -20,9 +20,7 @@ handleChange (event) {
 async handleSubmit (event) {
     event.preventDefault()
     try{
-      let response = await
-      //this.props.baseURL = http://localhost:3003
-      fetch(this.props.baseURL + '/blogs', {
+      let response = await fetch(this.props.baseURL + '/blogs', {
           method: 'POST', // Put, Delete
           body: JSON.stringify({title: this.state.title}, {description: this.state.description}),
           headers: {
